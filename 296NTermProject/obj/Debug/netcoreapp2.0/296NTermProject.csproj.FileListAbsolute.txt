@@ -1,0 +1,12 @@
+c:\users\m_kve\source\repos\296NTermProject\296NTermProject\bin\Debug\netcoreapp2.0\296NTermProject.deps.json
+c:\users\m_kve\source\repos\296NTermProject\296NTermProject\bin\Debug\netcoreapp2.0\296NTermProject.runtimeconfig.json
+c:\users\m_kve\source\repos\296NTermProject\296NTermProject\bin\Debug\netcoreapp2.0\296NTermProject.runtimeconfig.dev.json
+c:\users\m_kve\source\repos\296NTermProject\296NTermProject\bin\Debug\netcoreapp2.0\296NTermProject.dll
+c:\users\m_kve\source\repos\296NTermProject\296NTermProject\bin\Debug\netcoreapp2.0\296NTermProject.pdb
+c:\users\m_kve\source\repos\296NTermProject\296NTermProject\obj\Debug\netcoreapp2.0\296NTermProject.csprojResolveAssemblyReference.cache
+c:\users\m_kve\source\repos\296NTermProject\296NTermProject\obj\Debug\netcoreapp2.0\296NTermProject.csproj.CoreCompileInputs.cache
+c:\users\m_kve\source\repos\296NTermProject\296NTermProject\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+c:\users\m_kve\source\repos\296NTermProject\296NTermProject\obj\Debug\netcoreapp2.0\296NTermProject.AssemblyInfoInputs.cache
+c:\users\m_kve\source\repos\296NTermProject\296NTermProject\obj\Debug\netcoreapp2.0\296NTermProject.AssemblyInfo.cs
+c:\users\m_kve\source\repos\296NTermProject\296NTermProject\obj\Debug\netcoreapp2.0\296NTermProject.dll
+c:\users\m_kve\source\repos\296NTermProject\296NTermProject\obj\Debug\netcoreapp2.0\296NTermProject.pdb
