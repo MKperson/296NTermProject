@@ -13131,11 +13131,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\m_kve\\Source\\Repos\\296NTermProject\\296NTermProject\\296NTermProject.csproj",
+      "projectUniqueName": "C:\\Users\\m_kve\\source\\repos\\296NTermProject\\296NTermProject\\296NTermProject.csproj",
       "projectName": "296NTermProject",
-      "projectPath": "C:\\Users\\m_kve\\Source\\Repos\\296NTermProject\\296NTermProject\\296NTermProject.csproj",
+      "projectPath": "C:\\Users\\m_kve\\source\\repos\\296NTermProject\\296NTermProject\\296NTermProject.csproj",
       "packagesPath": "C:\\Users\\m_kve\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\m_kve\\Source\\Repos\\296NTermProject\\296NTermProject\\obj\\",
+      "outputPath": "C:\\Users\\m_kve\\source\\repos\\296NTermProject\\296NTermProject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
