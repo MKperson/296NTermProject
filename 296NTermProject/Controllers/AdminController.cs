@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using _296NTermProject.Models.AdminViewModels;
 using _296NTermProject.Models;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Authorization;
 
 namespace _296NTermProject.Controllers
 {
@@ -20,7 +21,7 @@ namespace _296NTermProject.Controllers
             roleManager = rm;
         }
 
-
+        [Authorize(Roles ="Admins")]
         public IActionResult Index()
         {
             return View();
