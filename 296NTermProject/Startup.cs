@@ -41,6 +41,7 @@ namespace _296NTermProject
             services.AddTransient<IEmailSender, EmailSender>();
 
             services.AddMvc();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -60,14 +61,14 @@ namespace _296NTermProject
             app.UseStaticFiles();
 
             app.UseAuthentication();
-
+            ApplicationDbContext.CreateAdminAccount(app.ApplicationServices, Configuration).Wait();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
-            ApplicationDbContext.CreateAdminAccount(app.ApplicationServices, Configuration).Wait();
+            
         }
     }
 }
