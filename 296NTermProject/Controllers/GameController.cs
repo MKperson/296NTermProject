@@ -38,5 +38,23 @@ namespace _296NTermProject.Controllers
 
             return RedirectToAction("Index");
         }
+        [HttpGet]
+        public ViewResult Edit(int id)
+        {
+            return View(gameRepo.GetgameById(id));
+        }
+
+        [HttpPost]
+        public RedirectToActionResult Edit(Game game)
+        {
+            gameRepo.Edit(game);
+            return RedirectToAction("Index");
+        }
+
+        public RedirectToActionResult Delete(int id)
+        {
+            gameRepo.Delete(id);
+            return RedirectToAction("Index");
+        }
     }
 }
