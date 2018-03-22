@@ -15,7 +15,7 @@
     @:Published: @g.Date.ToString("yyyy") <br />
     foreach (var a in g.Developers)
     {
-        @:Author: @a.CompanyName <br />
+        @:Developer: @a.CompanyName <br />
     }
     <a asp-action="Edit" asp-route-id="@g.GameID" class="btn btn-primary">Edit</a>
     <a asp-action="Delete" asp-route-id="@g.GameID" class="btn btn-danger">Delete</a>

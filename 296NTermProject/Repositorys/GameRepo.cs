@@ -19,7 +19,15 @@ namespace _296NTermProject.Repositorys
         }
         public int AddGame(Game game)
         {
-            throw new NotImplementedException();
+            context.Games.Update(game);
+            context.SaveChanges();
+            foreach (Developer d in game.Developers)
+            {
+                d.GameID = game.GameID;
+                context.Developers.Update(d);
+            }
+
+            return context.SaveChanges();
         }
 
         public int Delete(int id)
@@ -47,7 +55,7 @@ namespace _296NTermProject.Repositorys
 
         public Game GetgameById(int id)
         {
-            throw new NotImplementedException();
+            return context.Games.Include("Developer").First(g => g.GameID == id);
         }
     }
 }

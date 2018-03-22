@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using _296NTermProject.Repositorys;
+using _296NTermProject.Models;
 
 namespace _296NTermProject.Controllers
 {
@@ -18,6 +19,24 @@ namespace _296NTermProject.Controllers
         {
             var games = gameRepo.GetAllGames();
             return View(games);
+        }
+        public ViewResult Add()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public RedirectToActionResult Add(string title, string date, string developer)
+        {
+            Game game = new Game { Title = title, Date = DateTime.Parse(date) };
+            if (developer != null)
+            {
+                game.Developers.Add(new Developer { CompanyName = developer });
+            }
+
+            gameRepo.AddGame(game);
+
+            return RedirectToAction("Index");
         }
     }
 }
