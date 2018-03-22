@@ -1,7 +1,46 @@
-﻿
+﻿@model Game
 @{
     ViewData["Title"] = "Edit";
 }
 
-<h2>Edit</h2>
+<div>
+    <form method="post">
+        <div>
+            <label asp-for="Title">Title</label><br />
+            <input asp-for="@Model.Title" />
+        </div>
+        <div>
+            <label asp-for="Date">Publication Date</label><br />
+            <input asp-for="@Model.Date" />
+        </div>
+        <input type="hidden" asp-for="@Model.GameID" />
+
+
+        @foreach (Developer d in Model.Developers)
+        {
+            @:Developer: @d.CompanyName
+        }
+
+        <p>
+            <input type="submit" value="Enter" class="btn btn-success" />
+        </p>
+    </form>
+    <br />
+    <form method="post" asp-controller="Developer" asp-action="Add">
+        <div>
+            <label>Name</label><br />
+            <input name="name" /><br />          
+            <input type="hidden" name="bookid" value="@Model.GameID" />
+        </div>
+        <div>
+            <input type="submit" value="Add Author" class="btn btn-secondary" />
+
+        </div>
+    </form>
+</div>
+<br />
+<p>
+    <a asp-action="Index">Back to List</a>
+</p>
+
 

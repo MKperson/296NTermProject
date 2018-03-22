@@ -55,7 +55,7 @@ namespace _296NTermProject.Repositorys
 
         public Game GetgameById(int id)
         {
-            return context.Games.Include("Developer").First(g => g.GameID == id);
+            return context.Games.Include("Developers").First(g => g.GameID == id);
         }
     }
 }
