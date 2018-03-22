@@ -1,7 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Add Game";
 }
-
+@model Game
 <div>
     <form method="post">
         <div>
@@ -13,8 +13,8 @@
             <input name="date" id="date" />
         </div>
         <div>
-            <label for="author">Author</label><br />
-            <input name="author" id="author" />
+            <label for="developer">Developer</label><br />
+            <input name="developer" id="developer" />
         </div>
        
             <input type="submit" value="Enter" class="btn btn-success" />
