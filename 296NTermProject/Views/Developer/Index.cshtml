@@ -1,0 +1,16 @@
+﻿
+@model List<_296NTermProject.Models.Developer>
+@{
+    ViewData["Title"] = "Developers";
+}
+
+@foreach (var a in Model)
+{
+    @:<p>
+        @:Name: @a.CompanyName <br />
+        
+        <a asp-action="Edit" asp-route-id="@a.DeveloperID" class="btn btn-primary">Edit</a>
+        <a asp-action="Delete" asp-route-id="@a.DeveloperID" class="btn btn-danger">Delete</a>
+        
+    @:</p>
+}
