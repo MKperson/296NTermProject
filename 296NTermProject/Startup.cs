@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using _296NTermProject.Data;
 using _296NTermProject.Models;
 using _296NTermProject.Services;
+using _296NTermProject.Repositorys;
 
 namespace _296NTermProject
 {
@@ -41,7 +42,9 @@ namespace _296NTermProject
             services.AddTransient<IEmailSender, EmailSender>();
 
             services.AddMvc();
-            
+            services.AddTransient<IDeveloperRepo, DeveloperRepo>();
+            services.AddTransient<IGameRepo, GameRepo>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
