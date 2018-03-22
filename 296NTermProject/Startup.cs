@@ -61,7 +61,7 @@ namespace _296NTermProject
             app.UseStaticFiles();
 
             app.UseAuthentication();
-            ApplicationDbContext.CreateAdminAccount(app.ApplicationServices, Configuration).Wait();
+            //ApplicationDbContext.CreateAdminAccount(app.ApplicationServices, Configuration).Wait();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

@@ -21,7 +21,7 @@ namespace _296NTermProject.Controllers
             roleManager = rm;
         }
 
-        [Authorize(Roles ="Admins")]
+        //[Authorize(Roles ="Admins")]
         public IActionResult Index()
         {
             return View();

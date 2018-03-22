@@ -14,9 +14,14 @@ namespace _296NTermProject.Data
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
-            : base(options)
-        {
-        }
+            : base(options) { }
+        
+
+
+            public DbSet<Game> Games { get; set; }
+            public DbSet<Developer> Developers { get; set; }
+    
+    
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

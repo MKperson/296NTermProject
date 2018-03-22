@@ -11,9 +11,10 @@ using System;
 namespace _296NTermProject.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180320165630_admin")]
+    partial class admin
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -69,36 +70,6 @@ namespace _296NTermProject.Data.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers");
-                });
-
-            modelBuilder.Entity("_296NTermProject.Models.Developer", b =>
-                {
-                    b.Property<int>("DeveloperID")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("CompanyName");
-
-                    b.Property<int>("GameID");
-
-                    b.HasKey("DeveloperID");
-
-                    b.HasIndex("GameID");
-
-                    b.ToTable("Developers");
-                });
-
-            modelBuilder.Entity("_296NTermProject.Models.Game", b =>
-                {
-                    b.Property<int>("GameID")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<DateTime>("Date");
-
-                    b.Property<string>("Title");
-
-                    b.HasKey("GameID");
-
-                    b.ToTable("Games");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -207,14 +178,6 @@ namespace _296NTermProject.Data.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
-                });
-
-            modelBuilder.Entity("_296NTermProject.Models.Developer", b =>
-                {
-                    b.HasOne("_296NTermProject.Models.Game")
-                        .WithMany("Developers")
-                        .HasForeignKey("GameID")
-                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

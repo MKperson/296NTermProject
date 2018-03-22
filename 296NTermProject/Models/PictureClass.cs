@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.IO;
 
-namespace FanSite.Models
+namespace _296NTermProject.Models
 {
     public class PictureClass
     {

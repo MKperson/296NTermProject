@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>TODO Add Game Stuff</h2>
+@model List<_296NTermProject.Models.Game>
+@{
+    ViewData["Title"] = "Game List";
+}
+
+@foreach (var g in Model)
+{
+    @:Title: @g.Title <br />
+    @:Published: @g.Date.ToString("yyyy") <br />
+    foreach (var a in g.Developers)
+    {
+        @:Author: @a.CompanyName <br />
+    }
+    <a asp-action="Edit" asp-route-id="@g.GameID" class="btn btn-primary">Edit</a>
+    <a asp-action="Delete" asp-route-id="@g.GameID" class="btn btn-danger">Delete</a>
+    <br />
+}
+
+
+
